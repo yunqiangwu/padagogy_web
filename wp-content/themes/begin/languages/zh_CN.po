@@ -1,0 +1,1064 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Begin 1.0\n"
+"POT-Creation-Date: 2017-01-17 10:36+0800\n"
+"PO-Revision-Date: 2017-01-17 10:39+0800\n"
+"Last-Translator: \n"
+"Language-Team: zmingcx.com\n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: inc/options-theme\n"
+"X-Poedit-SearchPathExcluded-2: inc/function/lazy-avatars.php\n"
+
+#: comments.php:22 inc/function/function.php:154 inc/function/function.php:405
+#: inc/function/function.php:420 inc/function/function.php:443
+msgid "发表评论"
+msgstr "Comment"
+
+#: comments.php:22
+msgid "取消回复"
+msgstr "Cancel reply"
+
+#: comments.php:25
+msgid "您必须"
+msgstr "You must be"
+
+#: comments.php:25 inc/function/function.php:190 inc/login.php:6
+#: inc/login.php:32 inc/user-profile.php:71 inc/user-profile.php:80
+msgid "登录"
+msgstr "Log In"
+
+#: comments.php:25
+msgid "才能发表评论！"
+msgstr "to post a comment."
+
+#: comments.php:34
+msgid "登录者："
+msgstr "Howdy！"
+
+#: comments.php:35 inc/login.php:106 inc/user-profile.php:22
+#: inc/user-profile.php:47 pages/template-user.php:163
+msgid "登出"
+msgstr "Log out"
+
+#: comments.php:40 pages/template-reg.php:283
+msgid "欢迎"
+msgstr "Howdy"
+
+#: comments.php:40
+msgid "再次光临！"
+msgstr "You'll come again!"
+
+#: comments.php:41
+msgid "修改信息"
+msgstr "Change"
+
+#: comments.php:67
+msgid "插入图片"
+msgstr "Insert picture"
+
+#: comments.php:68
+msgid "插入表情"
+msgstr "Insert emoji"
+
+#: comments.php:75
+msgid "昵称"
+msgstr "Name"
+
+#: comments.php:79 pages/template-contact.php:107
+msgid "邮箱"
+msgstr "Email "
+
+#: comments.php:83
+msgid "网址"
+msgstr "Website"
+
+#: comments.php:93
+msgid "提交评论"
+msgstr "Post Comment"
+
+#: comments.php:103
+msgid "有回复时邮件通知我"
+msgstr "Notify me when replied"
+
+#: comments.php:112
+msgid "评论已关闭！"
+msgstr "Comments are closed."
+
+#: comments.php:125
+msgid "目前评论："
+msgstr "Replies to："
+
+#: comments.php:125
+msgid "其中：访客"
+msgstr "Visitors"
+
+#: comments.php:125
+msgid "博主"
+msgstr "Admin"
+
+#: comments.php:127
+msgid "引用"
+msgstr "trackbacks"
+
+#: comments.php:134
+msgid "来自外部的引用："
+msgstr "trackbacks："
+
+#: group/group-cat-a.php:7 group/group-cat-b.php:7 group/group-cat-c.php:7
+#: group/group-features.php:11 pages/template-favorites.php:94
+msgid "更多"
+msgstr "More"
+
+#: inc/copyright.php:8 inc/copyright.php:22 inc/copyright.php:32
+msgid "版权声明："
+msgstr "Copyright："
+
+#: inc/copyright.php:9 inc/copyright.php:30 inc/copyright.php:33
+msgid "转载请注明："
+msgstr "Reproduced Specify："
+
+#: inc/copyright.php:22
+msgid "本文源自"
+msgstr "The original"
+
+#: inc/copyright.php:28 inc/copyright.php:32
+msgid "于"
+msgstr "at "
+
+#: inc/copyright.php:28 inc/copyright.php:32
+msgid "由"
+msgstr "By"
+
+#: inc/copyright.php:28
+msgid "整理发表"
+msgstr "Finishing"
+
+#: inc/copyright.php:32
+msgid "本站原创文章"
+msgstr "Original articles"
+
+#: inc/copyright.php:32
+msgid "发表"
+msgstr "Publish"
+
+#: inc/frontpost/inc/ajax.php:80 inc/frontpost/inc/ajax.php:113
+msgid "对不起!您没有通过安全检查"
+msgstr ""
+
+#: inc/frontpost/inc/ajax.php:83
+msgid "您没有权限删除这篇文章"
+msgstr ""
+
+#: inc/frontpost/inc/ajax.php:87
+msgid "这篇文章不能被删除"
+msgstr ""
+
+#: inc/frontpost/inc/ajax.php:90
+msgid "这篇文章已被成功删除!"
+msgstr ""
+
+#: inc/frontpost/inc/ajax.php:119 inc/frontpost/views/submission-form.php:9
+msgid "您没有权限编辑这篇文章。"
+msgstr ""
+
+#: inc/frontpost/inc/ajax.php:152
+msgid "published"
+msgstr ""
+
+#: inc/frontpost/inc/ajax.php:155
+msgid "submitted"
+msgstr ""
+
+#: inc/frontpost/inc/ajax.php:161
+msgid "updated"
+msgstr ""
+
+#: inc/frontpost/inc/ajax.php:175
+msgid "您的文章已提交!"
+msgstr ""
+
+#: inc/frontpost/inc/options-panel.php:155
+msgid "所有人"
+msgstr ""
+
+#: inc/frontpost/inc/shortcodes.php:42
+msgid "Login"
+msgstr ""
+
+#: inc/frontpost/inc/shortcodes.php:43
+msgid "log in"
+msgstr ""
+
+#: inc/frontpost/views/post-tabs.php:22
+#, php-format
+msgid "共 %s 文章"
+msgstr ""
+
+#: inc/frontpost/views/submission-form.php:27
+msgid ""
+"This form needs JavaScript to function properly. Please turn on JavaScript "
+"and try again!"
+msgstr ""
+
+#: inc/function/comment-ajax.php:79
+msgid "提示：必须填写昵称及邮件。"
+msgstr "Your email address will not be published. Required fields are marked *"
+
+#: inc/function/comment-ajax.php:81
+msgid "提示：请输入一个有效的电子邮件地址。"
+msgstr "please fill the required fields (name, email)."
+
+#: inc/function/comment-ajax.php:85
+msgid "提示：请输入评论内容。"
+msgstr "please type a comment."
+
+#: inc/function/comment-ajax.php:99
+msgid "貌似您已发表过重复的评论!"
+msgstr "Repetitive comments!"
+
+#: inc/function/comment-ajax.php:108
+msgid "您发表评论也太快了!"
+msgstr "Comment is too fast!"
+
+#: inc/function/comment-ajax.php:177 inc/function/comment-template.php:77
+msgid "您的评论正在等待审核！"
+msgstr "Your comment is awaiting moderation."
+
+#: inc/function/comment-template.php:35
+#, php-format
+msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">:</span>"
+msgstr ""
+
+#: inc/function/comment-template.php:48
+msgid "回复"
+msgstr "Reply"
+
+#: inc/function/comment-template.php:53
+msgid "删除"
+msgstr "Delete"
+
+#: inc/function/comment-template.php:56 inc/function/function.php:412
+#: inc/function/function.php:440
+msgid "编辑"
+msgstr "Edit"
+
+#: inc/function/comment-template.php:62
+msgid "沙发"
+msgstr "1F"
+
+#: inc/function/comment-template.php:63
+msgid "板凳"
+msgstr "2F"
+
+#: inc/function/comment-template.php:64
+msgid "地板"
+msgstr "3F"
+
+#: inc/function/comment-template.php:65
+msgid "楼"
+msgstr "F"
+
+#: inc/function/comment-template.php:69
+msgid "层"
+msgstr "B"
+
+#: inc/function/crumb-search.php:5
+msgid " 找到 "
+msgstr "  Find  "
+
+#: inc/function/crumb-search.php:6
+msgid " 个与之相关的文章"
+msgstr "Related Articles"
+
+#: inc/function/function.php:47
+msgid "共"
+msgstr "Total of"
+
+#: inc/function/function.php:47
+msgid "字"
+msgstr "character"
+
+#: inc/function/function.php:89
+msgid "隐藏目录"
+msgstr "Hidden"
+
+#: inc/function/function.php:89
+msgid "目录"
+msgstr " "
+
+#: inc/function/function.php:121
+#, php-format
+msgid "查看与 %s 相关的文章"
+msgstr "Read  %s the article"
+
+#: inc/function/function.php:151 inc/function/function.php:187
+msgid "此处为隐藏的内容！"
+msgstr "The content of the hide!"
+
+#: inc/function/function.php:152
+msgid "发表评论并刷新，才能查看"
+msgstr "Comments after reading"
+
+#: inc/function/function.php:188
+msgid "登录后才能查看！"
+msgstr "Log in to view!"
+
+#: inc/function/function.php:211
+msgid "输入密码查看加密内容："
+msgstr "Enter the password:"
+
+#: inc/function/function.php:214
+msgid "提交"
+msgstr "Submit"
+
+#: inc/function/function.php:256
+msgid "第"
+msgstr "Page"
+
+#: inc/function/function.php:257
+msgid "页"
+msgstr " "
+
+#: inc/function/function.php:270 inc/function/function.php:377
+msgid "现在位置"
+msgstr "Location"
+
+#: inc/function/function.php:270 inc/function/function.php:278
+#: inc/function/function.php:377
+msgid "首页"
+msgstr "Home"
+
+#: inc/function/function.php:285 inc/function/widget.php:1006
+#: inc/function/widget.php:1763
+msgid "文章"
+msgstr "Articles"
+
+#: inc/function/function.php:361 inc/function/type-breadcrumb.php:56
+#: inc/function/type-breadcrumb.php:73 inc/function/type-breadcrumb.php:90
+#: inc/function/type-breadcrumb.php:107
+msgid "正文"
+msgstr "Posts"
+
+#: inc/function/function.php:363
+msgid "附件"
+msgstr "Attachment"
+
+#: inc/function/function.php:386
+msgid "亲，你迷路了！"
+msgstr "404"
+
+#: inc/function/function.php:388 searchform.php:5
+msgid "搜索"
+msgstr "Search"
+
+#: inc/function/function.php:402 inc/function/function.php:417
+msgid "密码保护"
+msgstr "Password"
+
+#: inc/function/function.php:414 inc/function/function.php:441
+msgid "打印"
+msgstr "print"
+
+#: inc/function/function.php:425 inc/function/function.php:446
+msgid "侧边栏"
+msgstr "sidebar"
+
+#: inc/function/function.php:430
+msgid "所属分类"
+msgstr "Categories"
+
+#: inc/function/function.php:488 inc/function/function.php:508
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: inc/function/function.php:609
+msgid "文字折叠"
+msgstr "Folding Text"
+
+#: inc/function/function.php:609
+msgid "展开"
+msgstr "Spread"
+
+#: inc/function/function.php:695
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: inc/function/function.php:1323
+msgid "All Settings"
+msgstr ""
+
+#: inc/function/order.php:26
+msgid "文章排序"
+msgstr "Sorting"
+
+#: inc/function/order.php:30
+msgid "按日期排序"
+msgstr "Date"
+
+#: inc/function/order.php:35
+msgid "随机排序"
+msgstr "Random"
+
+#: inc/function/order.php:40
+msgid "按评论排序"
+msgstr "Comment"
+
+#: inc/function/order.php:45
+msgid "按浏览排序"
+msgstr "Views"
+
+#: inc/function/order.php:50
+msgid "按点赞排序"
+msgstr "Like"
+
+#: inc/function/type-breadcrumb.php:210
+msgid "问题"
+msgstr "Question"
+
+#: inc/function/widget.php:1007
+msgid "留言"
+msgstr "Reviews"
+
+#: inc/function/widget.php:1164
+msgid "Title:"
+msgstr ""
+
+#: inc/function/widget.php:1168
+msgid "Automatically add paragraphs"
+msgstr ""
+
+#: inc/function/widget.php:1764 inc/scroll.php:4 inc/user/my-post.php:8
+msgid "评论"
+msgstr "Comments"
+
+#: inc/function/widget.php:1766
+msgid "更多文章"
+msgstr "More"
+
+#: inc/invitation/back-end.php:8 inc/invitation/back-end.php:32
+#: inc/invitation/back-end.php:52 inc/invitation/back-end.php:59
+#: inc/invitation/back-end.php:74 inc/invitation/back-end.php:87
+#: inc/invitation/back-end.php:104 inc/invitation/back-end.php:229
+msgid "添加邀请码"
+msgstr ""
+
+#: inc/invitation/back-end.php:30 inc/invitation/back-end.php:31
+#: inc/invitation/back-end.php:58 inc/invitation/back-end.php:80
+#: inc/invitation/back-end.php:103 inc/invitation/back-end.php:228
+msgid "全部邀请码"
+msgstr ""
+
+#: inc/invitation/back-end.php:33 inc/invitation/back-end.php:60
+#: inc/invitation/back-end.php:81 inc/invitation/back-end.php:95
+#: inc/invitation/back-end.php:102 inc/invitation/back-end.php:110
+#: inc/invitation/back-end.php:230
+msgid "生成邀请码"
+msgstr ""
+
+#: inc/invitation/back-end.php:35
+msgid "未使用的邀请码"
+msgstr ""
+
+#: inc/invitation/back-end.php:42
+msgid "-- 没有邀请码! --"
+msgstr ""
+
+#: inc/invitation/back-end.php:45
+msgid "提示：将邀请码发送给朋友，邀请他们在你的博客注册。"
+msgstr ""
+
+#: inc/invitation/back-end.php:53
+msgid "添加链接"
+msgstr ""
+
+#: inc/invitation/back-end.php:54
+msgid "文本链接"
+msgstr ""
+
+#: inc/invitation/back-end.php:57
+msgid "邀请码设置"
+msgstr ""
+
+#: inc/invitation/back-end.php:75 inc/invitation/back-end.php:264
+#: inc/invitation/back-end.php:272 inc/invitation/front-end.php:10
+#: pages/template-reg.php:256
+msgid "邀请码"
+msgstr "Invite code"
+
+#: inc/invitation/back-end.php:76 inc/invitation/back-end.php:99
+msgid "最大数"
+msgstr ""
+
+#: inc/invitation/back-end.php:79
+msgid "添加邀请码！"
+msgstr ""
+
+#: inc/invitation/back-end.php:96
+msgid "邀请码前缀"
+msgstr ""
+
+#: inc/invitation/back-end.php:97
+msgid "长度"
+msgstr ""
+
+#: inc/invitation/back-end.php:98
+msgid "邀请码数量"
+msgstr ""
+
+#: inc/invitation/back-end.php:124 inc/invitation/back-end.php:153
+msgid "How many time this code can be used?"
+msgstr ""
+
+#: inc/invitation/back-end.php:124 inc/invitation/back-end.php:126
+#: inc/invitation/back-end.php:128 inc/invitation/back-end.php:153
+#, php-format
+msgid " (Minimum %d)"
+msgstr ""
+
+#: inc/invitation/back-end.php:126
+msgid "Incorrect length."
+msgstr ""
+
+#: inc/invitation/back-end.php:126
+#, php-format
+msgid " (Maximum %d)"
+msgstr ""
+
+#: inc/invitation/back-end.php:128
+msgid "How many codes do you need?"
+msgstr ""
+
+#: inc/invitation/back-end.php:139
+#, php-format
+msgid "已添加 %d 个邀请码，<a href=\"%s\">查看全部邀请码 &raquo;</a>"
+msgstr ""
+
+#: inc/invitation/back-end.php:151
+#, php-format
+msgid "已添加邀请码：<i>%s</i> 可以再添加一个."
+msgstr ""
+
+#: inc/invitation/back-end.php:155
+msgid "您还没有输入邀请码 ..."
+msgstr ""
+
+#: inc/invitation/back-end.php:157
+#, php-format
+msgid "已添加邀请码：<i>%s</i><a href=\"%s\"> 查看全部邀请码 &raquo;</a>"
+msgstr ""
+
+#: inc/invitation/back-end.php:180
+#, php-format
+msgid "需要邀请码 ? <a href=\"mailto:%s\">联系我们!</a>"
+msgstr ""
+
+#: inc/invitation/back-end.php:200
+#, php-format
+msgid "邀请码 <b>%s</b> 成功删除。"
+msgstr ""
+
+#: inc/invitation/back-end.php:202
+#, php-format
+msgid "邀请码 <b>%s</b>并没有被删除。"
+msgstr ""
+
+#: inc/invitation/back-end.php:209
+msgid "所有的邀请码都删除了。"
+msgstr ""
+
+#: inc/invitation/back-end.php:233
+#, php-format
+msgid "Search results for &#8220;%s&#8221;"
+msgstr ""
+
+#: inc/invitation/back-end.php:249
+msgid "全部"
+msgstr ""
+
+#: inc/invitation/back-end.php:250
+msgid "已使用"
+msgstr ""
+
+#: inc/invitation/back-end.php:251
+msgid "未使用"
+msgstr ""
+
+#: inc/invitation/back-end.php:255
+msgid "Search by keyword"
+msgstr ""
+
+#: inc/invitation/back-end.php:258
+msgid "搜索邀请码"
+msgstr ""
+
+#: inc/invitation/back-end.php:265 inc/invitation/back-end.php:273
+msgid "计数"
+msgstr ""
+
+#: inc/invitation/back-end.php:266 inc/invitation/back-end.php:274
+msgid "使用者(s)"
+msgstr ""
+
+#: inc/invitation/back-end.php:267 inc/invitation/back-end.php:275
+msgid "操作"
+msgstr ""
+
+#: inc/invitation/back-end.php:309
+msgid "Delete"
+msgstr ""
+
+#: inc/invitation/back-end.php:316 inc/invitation/back-end.php:320
+#, php-format
+msgid "无邀请码, <a href=\"%s\">添加一个</a>"
+msgstr ""
+
+#: inc/invitation/back-end.php:325
+msgid "删除所有邀请码"
+msgstr ""
+
+#: inc/invitation/back-end.php:339
+#, php-format
+msgid "目前没有可以使用的邀请码 <a href=\"%s\">现在添加</a>&nbsp;!"
+msgstr ""
+
+#: inc/invitation/fields.php:7
+msgid "在注册页面表单，添加文本和链接。"
+msgstr ""
+
+#: inc/invitation/fields.php:14
+msgid "你可以使用HTML标签。"
+msgstr ""
+
+#: inc/invitation/fields.php:20
+msgid "同一邀请码可以几个用户使用？"
+msgstr ""
+
+#: inc/invitation/fields.php:26
+msgid "验证长度（最短4位,最长16位）"
+msgstr ""
+
+#: inc/invitation/fields.php:32
+msgid "你要生成几个邀请码？"
+msgstr ""
+
+#: inc/invitation/fields.php:38
+msgid "请用字母或者数字,禁止用其他字符"
+msgstr ""
+
+#: inc/invitation/fields.php:44
+msgid "添加生成验证码的前缀"
+msgstr ""
+
+#: inc/invitation/front-end.php:31
+msgid "<strong>错误</strong>: 请输入正确的邀请码！"
+msgstr ""
+
+#: inc/invitation/front-end.php:34
+msgid "<strong>错误</strong>: 此邀请码已被使用！"
+msgstr ""
+
+#: inc/login.php:9 inc/login.php:57 inc/user-profile.php:61
+msgid "注册"
+msgstr "Register"
+
+#: inc/login.php:11
+msgid "找回密码"
+msgstr "Lost ?"
+
+#: inc/login.php:19 inc/login.php:48 pages/template-reg.php:243
+msgid "用户名"
+msgstr "Username or Email Address"
+
+#: inc/login.php:23
+msgid "密码"
+msgstr "Password"
+
+#: inc/login.php:29
+msgid "记住我的登录信息"
+msgstr "Remember Me"
+
+#: inc/login.php:52 pages/template-reg.php:249
+msgid "电子邮件地址"
+msgstr "Email Address"
+
+#: inc/login.php:67
+msgid "立即注册"
+msgstr "Go Register"
+
+#: inc/login.php:68
+msgid "点击“立即注册”转到用户注册页面。"
+msgstr "Go to the user registration page."
+
+#: inc/login.php:75
+msgid "输入用户名或电子邮箱地址，您会收到一封新密码链接的电子邮件。"
+msgstr ""
+"Please enter your username or email address. You will receive a link to "
+"create a new password via email."
+
+#: inc/login.php:78
+msgid "用户名或电子邮件地址"
+msgstr "Username or Email Address"
+
+#: inc/login.php:83
+msgid "获取新密码"
+msgstr "Get New Password"
+
+#: inc/login.php:97 inc/user-profile.php:9 inc/user-profile.php:33
+msgid "您好！"
+msgstr "Howdy!"
+
+#: inc/login.php:104 inc/user-profile.php:20 inc/user-profile.php:45
+#: pages/template-reg.php:287
+msgid "管理站点"
+msgstr "Site Admin"
+
+#: inc/login.php:105 inc/user-profile.php:21 inc/user-profile.php:44
+#: inc/user-profile.php:46 pages/template-reg.php:289
+#: pages/template-user.php:156
+msgid "用户中心"
+msgstr "User Center"
+
+#: inc/scroll.php:2
+msgid "文章目录"
+msgstr "Directory"
+
+#: inc/scroll.php:3
+msgid "返回顶部"
+msgstr "Top"
+
+#: inc/scroll.php:5
+msgid "转到底部"
+msgstr "Bottom "
+
+#: inc/scroll.php:9
+msgid "本页二维码"
+msgstr "Qr code"
+
+#: inc/search-baidu.php:5
+msgid "输入百度站内搜索关键词"
+msgstr "Search Content"
+
+#: inc/search-baidu.php:6
+msgid "百度"
+msgstr "baidu"
+
+#: inc/social.php:5
+msgid "点赞"
+msgstr "Like"
+
+#: inc/social.php:5
+msgid "赞"
+msgstr "Like"
+
+#: inc/social.php:45
+msgid "分享"
+msgstr "Share"
+
+#: inc/user/my-post.php:4
+msgid "标题"
+msgstr "Title"
+
+#: inc/user/my-post.php:5
+msgid "日期"
+msgstr "Date"
+
+#: inc/user/my-post.php:6
+msgid "浏览"
+msgstr "Views"
+
+#: inc/user/my-post.php:7
+msgid "分类"
+msgstr "Categories"
+
+#: inc/user/my-post.php:9
+msgid "状态"
+msgstr "Status"
+
+#: inc/user/my-post.php:29
+msgid "通过"
+msgstr "Published"
+
+#: inc/user/my-post.php:32
+msgid "待审"
+msgstr "Previous"
+
+#: pages/template-contact.php:94
+msgid "联系我们"
+msgstr "Contact us"
+
+#: pages/template-contact.php:100
+msgid "您的电子邮件已发送成功！"
+msgstr "Your email has been sent successfully!"
+
+#: pages/template-contact.php:101
+msgid "请输入您的姓名和一个有效的电子邮件地址及邮件内容。"
+msgstr "Please enter your name and a valid email address and email."
+
+#: pages/template-contact.php:102
+msgid "您的电子邮件发送失败，请稍后再试。"
+msgstr "Your email failed, please try again later."
+
+#: pages/template-contact.php:105 pages/template-user-profile.php:128
+msgid "名字"
+msgstr "First Name"
+
+#: pages/template-contact.php:109
+msgid "邮件内容"
+msgstr "Email content"
+
+#: pages/template-contact.php:112
+msgid "发送邮件"
+msgstr "Send E-mail"
+
+#: pages/template-reg.php:14
+msgid "请输入用户名！"
+msgstr "Please fill in the user name!"
+
+#: pages/template-reg.php:16
+msgid "此用户名包含无效字符，请输入有效的用户名！"
+msgstr "User name contains invalid characters!"
+
+#: pages/template-reg.php:19
+msgid "该用户名已被注册，请再选择一个！"
+msgstr "This user name has been registered!"
+
+#: pages/template-reg.php:24
+msgid "请填写电子邮件地址！"
+msgstr "Please fill in email address!"
+
+#: pages/template-reg.php:26
+msgid "电子邮件地址不正确！"
+msgstr "Email address is not correct!"
+
+#: pages/template-reg.php:29
+msgid "该电子邮件地址已经被注册，请换一个！"
+msgstr "This email address has been registered!"
+
+#: pages/template-reg.php:37
+msgid "邀请码错误！"
+msgstr "Invite code error!"
+
+#: pages/template-reg.php:40
+msgid "此邀请码已被使用！"
+msgstr "This invitation code has been used!"
+
+#: pages/template-reg.php:46
+msgid "密码长度至少6位!"
+msgstr "Password length at least six!"
+
+#: pages/template-reg.php:48
+msgid "密码不一致!"
+msgstr "Passwords do not match!"
+
+#: pages/template-reg.php:258
+msgid "获取邀请码"
+msgstr "Invite code"
+
+#: pages/template-reg.php:264
+msgid "密码(至少6位)"
+msgstr "Password(at least 6 digits)"
+
+#: pages/template-reg.php:270
+msgid "重复密码"
+msgstr "Repeat the password"
+
+#: pages/template-reg.php:277
+msgid "提交注册"
+msgstr "Register"
+
+#: pages/template-reg.php:284
+msgid "退出登录"
+msgstr "Log out"
+
+#: pages/template-user-profile.php:115
+msgid "个人资料已更新。"
+msgstr "Profile updated."
+
+#: pages/template-user-profile.php:119
+msgid "两次输入的密码不一样！"
+msgstr "Two input password is not the same!"
+
+#: pages/template-user-profile.php:124
+msgid "登录名 (不可更改)"
+msgstr "Username(cannot be changed)"
+
+#: pages/template-user-profile.php:132
+msgid "呢称 (必填)"
+msgstr "Nickname (required)"
+
+#: pages/template-user-profile.php:136
+msgid "公开显示"
+msgstr "Display name publicly as"
+
+#: pages/template-user-profile.php:171
+msgid "电子邮件 (必填)"
+msgstr "Email (required)"
+
+#: pages/template-user-profile.php:175
+msgid "新密码"
+msgstr "New Password"
+
+#: pages/template-user-profile.php:179
+msgid "重复新密码"
+msgstr "Repeat the new password"
+
+#: pages/template-user-profile.php:182
+msgid "其它信息"
+msgstr "Contact Info"
+
+#: pages/template-user-profile.php:184
+msgid "站点"
+msgstr "Website"
+
+#: pages/template-user-profile.php:189
+msgid "QQ"
+msgstr "QQ"
+
+#: pages/template-user-profile.php:193
+msgid "微信"
+msgstr "Weixin"
+
+#: pages/template-user-profile.php:198
+msgid "新浪微博"
+msgstr "weibo."
+
+#: pages/template-user-profile.php:202
+msgid "个人说明"
+msgstr "Biographical Info"
+
+#: pages/template-user-profile.php:206
+msgid "上传头像"
+msgstr "Upload the profile picture"
+
+#: pages/template-user-profile.php:225
+msgid "上传本地头像"
+msgstr "Upload the local picture"
+
+#: pages/template-user-profile.php:232
+msgid "更新个人资料"
+msgstr "Update Profile"
+
+#: pages/template-user.php:166
+msgid "我要投稿"
+msgstr "Contribute"
+
+#: pages/template-user.php:173 pages/template-user.php:179
+msgid "我的文章"
+msgstr "My Posts"
+
+#: pages/template-user.php:174 pages/template-user.php:189
+msgid "我的评论"
+msgstr "My comments"
+
+#: pages/template-user.php:175 pages/template-user.php:194
+msgid "个人资料"
+msgstr "Your Profile"
+
+#: searchform.php:4
+msgid "输入搜索内容"
+msgstr "Search Content"
+
+#: searchform.php:10
+msgid "全站"
+msgstr "All"
+
+#: single-bulletin.php:60 single-download.php:70 single-picture.php:71
+#: single-tao.php:203 single-video.php:84 single.php:28
+msgid "上一篇"
+msgstr "Previous"
+
+#: single-bulletin.php:60 single-bulletin.php:61 single-download.php:70
+#: single-download.php:71 single-picture.php:71 single-picture.php:72
+#: single-tao.php:203 single-tao.php:204 single-video.php:84
+#: single-video.php:85 single.php:28 single.php:29
+msgid "没有了"
+msgstr "None"
+
+#: single-bulletin.php:60 single-download.php:70 single-picture.php:71
+#: single-tao.php:203 single-video.php:84 single.php:28
+msgid "已是最后文章"
+msgstr "Is the last"
+
+#: single-bulletin.php:61 single-download.php:71 single-picture.php:72
+#: single-tao.php:204 single-video.php:85 single.php:29
+msgid "下一篇"
+msgstr "Next"
+
+#: single-bulletin.php:61 single-download.php:71 single-picture.php:72
+#: single-tao.php:204 single-video.php:85 single.php:29
+msgid "已是最新文章"
+msgstr "Is the latest"
+
+#: template/content.php:47
+msgid "摘要"
+msgstr "Excerpt"
+
+#. Theme Name of the plugin/theme
+msgid "Begin"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://zmingcx.com/begin.html"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"HTML5+CSS3 响应式设计，博客、杂志、图片、公司企业多种布局可选，集成SEO自定义"
+"功能，丰富的主题选项，众多实用小工具。"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "知更鸟"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://zmingcx.com/"
+msgstr ""
+
+#~ msgid "博主："
+#~ msgstr "Admin"
+
+#~ msgid "阅读"
+#~ msgstr "Views"
+
+#~ msgid "页面加载中..."
+#~ msgstr "Loading in..."
+
+#~ msgid "返回首页"
+#~ msgstr "Home"
+
+#~ msgid "请滑动滚动条解锁"
+#~ msgstr "Slide to unlock"
+
+#~ msgid "滑动解锁才能提交"
+#~ msgstr "Slide to unlock"
+
+#~ msgid "刚刚"
+#~ msgstr "Just"
+
+#~ msgid "登 录"
+#~ msgstr "Log In"
+
+#~ msgid "注 册"
+#~ msgstr "Register"
+
+#~ msgid "登 出"
+#~ msgstr "Log Out"
+
+#~ msgid "search"
+#~ msgstr "搜索"

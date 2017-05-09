@@ -1,0 +1,37 @@
+.menu-padagogy-container {
+    border-bottom: 1px solid gray;
+    padding: 1rem 2rem;
+    margin: .5rem;
+}
+.menu-padagogy-container > .padagogy-menu >li{
+    margin-bottom:.5rem;
+}
+
+.menu-padagogy-container > .padagogy-menu >li> a {
+    background:#f40;
+    box-shadow: rgba(0, 0, 0, 0.46) 4px 2px 3px 2px;
+    color: white;
+    font-weight: bold;
+    padding: 2px 20px;
+    border-radius: 3%;
+}
+.menu-padagogy-container > .padagogy-menu >li> a:hover, .menu-padagogy-container  .current-menu-item a {
+    color:white;
+}
+
+.menu-padagogy-container a+ul ,.menu-padagogy-container a+ul>li  {
+    display:inline-block;
+    margin-left:1rem;
+    padding: 0 .4rem;
+    transition: all .1s ease-in-out;
+    /* transition: all .3s ease-in-out; */
+}
+
+.menu-padagogy-container a+ul>li:hover,.menu-padagogy-container a+ul>li>a:hover , .menu-padagogy-container  .current-menu-item{
+    background:#1ba1e2;
+    color:white;
+    box-shadow: rgba(0, 0, 0, 0.18) 4px 2px 3px 2px;
+    color: white;
+    border-radius: 3%;
+    transition: all .1s ease-in-out;
+}

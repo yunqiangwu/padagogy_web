@@ -1,0 +1,51 @@
+<?php $display_categories =  explode(',',zm_get_option('group_cat_c_id') ); foreach ($display_categories as $category) { ?>
+<?php query_posts( array( 'showposts' => 1, 'cat' => $category, 'post__not_in' => $do_not_cat ) ); ?>
+
+<div class="gr2">
+	<div class="gr-cat-box wow fadeInUp" data-wow-delay="0.5s">
+		<h3 class="gr-cat-title"><a href="<?php echo get_category_link($category);?>" title="<?php echo strip_tags(category_description($category)); ?>"><?php single_cat_title(); ?></a></h3>
+		<div class="gr-cat-more"><a href="<?php echo get_category_link($category);?>" title="<?php echo strip_tags(category_description($category)); ?>"><?php _e( '更多', 'begin' ); ?> <i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i></a></div>
+		<div class="clear"></div>
+		<div class="gr-cat-site">
+			<?php if (zm_get_option('group_cat_c_top')) { ?>
+
+				<?php query_posts( array ( 'category__in' => array(get_query_var('cat')), 'meta_key' => 'cat_top', 'showposts' => 1, 'ignore_sticky_posts' => 1 ) ); while ( have_posts() ) : the_post(); $do_not_cat[] = $post->ID;?>
+					<figure class="gr-thumbnail"><?php if (zm_get_option('lazy_s')) { zm_long_thumbnail_h(); } else { zm_long_thumbnail(); } ?></figure>
+					<?php the_title( sprintf( '<h2 class="gr-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+				<?php endwhile; ?>
+
+				<div class="clear"></div>
+				<ul class="gr-cat-list">
+					<?php query_posts( array( 'showposts' => zm_get_option('group_cat_c_n'), 'cat' => $category, 'offset' => 0, 'post__not_in' => $do_not_cat ) ); ?>
+					<?php while ( have_posts() ) : the_post(); ?>
+						<li class="list-date wow fadeInUp" data-wow-delay="0.5s"><?php the_time('m/d') ?></li>
+						<?php the_title( sprintf( '<li class="list-title wow fadeInUp" data-wow-delay="0.5s"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></li>' ); ?>
+					<?php endwhile; ?>
+					<?php wp_reset_query(); ?>
+				</ul>
+
+
+			<?php } else { ?>
+
+				<?php while ( have_posts() ) : the_post(); ?>
+					<figure class="gr-thumbnail"><?php if (zm_get_option('lazy_s')) { zm_long_thumbnail_h(); } else { zm_long_thumbnail(); } ?></figure>
+					<?php the_title( sprintf( '<h2 class="gr-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+				<?php endwhile; ?>
+
+				<div class="clear"></div>
+				<ul class="gr-cat-list">
+					<?php query_posts( array( 'showposts' => zm_get_option('group_cat_c_n'), 'cat' => $category, 'offset' => 1, 'post__not_in' => $do_not_cat ) ); ?>
+					<?php while ( have_posts() ) : the_post(); ?>
+						<li class="list-date wow fadeInUp" data-wow-delay="0.5s"><?php the_time('m/d') ?></li>
+						<?php the_title( sprintf( '<li class="list-title wow fadeInUp" data-wow-delay="0.5s"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></li>' ); ?>
+					<?php endwhile; ?>
+					<?php wp_reset_query(); ?>
+				</ul>
+
+			<?php } ?>
+		</div>
+	</div>
+
+</div>
+<?php } ?>
+<div class="clear"></div>
