@@ -129,12 +129,12 @@ CREATE PROCEDURE p_import_comment(var_post_id INTEGER, p_jpw_id VARCHAR(10))
         INSERT INTO `wp_comments` ( `comment_post_ID`, `comment_author`, `comment_author_email`, `comment_author_url`,
                                    `comment_author_IP`, `comment_date`, `comment_date_gmt`, `comment_content`, `comment_karma`, `comment_approved`,
                                    `comment_agent`, `comment_type`, `comment_parent`, `user_id`, `comment_mail_notify`)
-        VALUES ( var_post_id, row_user_name, '842269153@qq.com', '', row_ip, IFNULL(from_unixtime( row_ctime),now()), IFNULL(from_unixtime( row_ctime),now()),
+        VALUES ( var_post_id, row_user_name, '842269151@qq.com', '', row_ip, IFNULL(FROM_UNIXTIME(SUBSTR(row_ctime,1,10)),now()), IFNULL(FROM_UNIXTIME(SUBSTR(row_ctime,1,10)),now()),
                               IFNULL(url_decode( row_cmtcnt),''), '0', '1',
                 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
                 '', '0', '0', '1');
         SET  _last_insert_id = LAST_INSERT_ID();
-        INSERT INTO `wordpress`.`wp_commentmeta` ( `comment_id`, `meta_key`, `meta_value`) VALUES
+        INSERT INTO `wp_commentmeta` ( `comment_id`, `meta_key`, `meta_value`) VALUES
           (_last_insert_id, 'rating', row_rating),
           (_last_insert_id, 'praise', row_praise),
           (_last_insert_id, 'user_icon', row_user_icon),
@@ -304,15 +304,17 @@ CREATE PROCEDURE wk()
 
         SET _last_insert_id = LAST_INSERT_ID();
 
-        INSERT INTO scott.wp_postmeta (post_id, meta_key, meta_value) VALUES
+        INSERT INTO wp_postmeta (post_id, meta_key, meta_value) VALUES
           (_last_insert_id, 'app_icon', row_p_icon_url),
           (_last_insert_id, 'dl_url', row_p_dl_url),
+          (_last_insert_id, 'dl_count', row_p_dl_count),
           (_last_insert_id, 'app_img', row_p_app_img),
           (_last_insert_id, 'last_release_time', row_p_last_release_time),
           (_last_insert_id, 'app_score', row_p_app_score),
           (_last_insert_id, 'produce_company', row_p_produce_company),
           (_last_insert_id, 'other_msg', row_p_other_msg),
           (_last_insert_id, 'file_size', row_p_file_size),
+          (_last_insert_id, 'data_from', 'jpw_spider'),
           (_last_insert_id, 'jpw_id', row_p_jpw_id),
           (_last_insert_id, 'vote_up', row_p_vote_up),
           (_last_insert_id, 'vote_down', row_p_vote_down);
@@ -368,6 +370,28 @@ CREATE PROCEDURE wk()
     REPEAT;
 
     select var_i;
+
+    UPDATE wp_posts posts
+    SET comment_count = (
+      SELECT
+        count(1)
+      FROM
+        wp_comments comments
+      WHERE
+        comments.comment_post_ID = posts.ID
+    );
+
+    UPDATE wp_term_taxonomy
+    set wp_term_taxonomy.count =(
+      SELECT count(1)
+      FROM
+        wp_term_relationships
+      where
+        wp_term_taxonomy.term_taxonomy_id = wp_term_relationships.term_taxonomy_id
+
+    );
+
+
     COMMIT ;
 
     CLOSE padagogy_cur;
