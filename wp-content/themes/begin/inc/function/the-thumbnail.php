@@ -17,7 +17,13 @@ function zm_thumbnail() {
 			preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content, $strResult, PREG_PATTERN_ORDER);
 			$n = count($strResult[1]);
 			if($n > 0){
-				echo '<a href="'.get_permalink().'"><img src="'.get_template_directory_uri().'/timthumb.php?src='.$strResult[1][0].'&w='.zm_get_option('img_w').'&h='.zm_get_option('img_h').'&a='.zm_get_option('crop_top').'&zc=1" alt="'.$post->post_title .'" /></a>';
+                $imgurl = $strResult[1][0];
+                if(preg_match('/^data:.*/',$imgurl)){
+                    echo '<a href="'.get_permalink().'"><img src="'.$imgurl.'" width="'.zm_get_option('img_w').'" height="'.zm_get_option('img_h').'" alt="'.$post->post_title .'" /></a>';
+                }else{
+                    echo '<a href="'.get_permalink().'"><img src="'.get_template_directory_uri().'/timthumb.php?src='.$imgurl.'&w='.zm_get_option('img_w').'&h='.zm_get_option('img_h').'&a='.zm_get_option('crop_top').'&zc=1" alt="'.$post->post_title .'" /></a>';
+                }
+
 			} else { 
 				$random = mt_rand(1, 20);
 				echo '<a href="'.get_permalink().'"><img src="'.get_template_directory_uri().'/img/random/'. $random .'.jpg" alt="'.$post->post_title .'" /></a>';
@@ -43,7 +49,17 @@ function zm_thumbnail_h() {
 			preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content, $strResult, PREG_PATTERN_ORDER);
 			$n = count($strResult[1]);
 			if($n > 0){
-				echo '<span class="load"><a href="'.get_permalink().'"><img src="' . get_template_directory_uri() . '/img/loading.png" data-original="'.get_template_directory_uri().'/timthumb.php?src='.$strResult[1][0].'&w='.zm_get_option('img_w').'&h='.zm_get_option('img_h').'&a='.zm_get_option('crop_top').'&zc=1" alt="'.$post->post_title .'" /></a></span>';
+
+                $imgurl = $strResult[1][0];
+                if(preg_match('/^data:.*/',$imgurl)){
+                    echo '<a href="'.get_permalink().'"><img src="'.$imgurl.'" width="'.zm_get_option('img_w').'" height="'.zm_get_option('img_h').'" alt="'.$post->post_title .'" /></a>';
+                    echo '<span class="load"><a href="'.get_permalink().'"><img src="' . get_template_directory_uri() . '/img/loading.png" data-original="'.$imgurl.'" width="'.zm_get_option('img_w').'" height="'.zm_get_option('img_h').'"  alt="'.$post->post_title .'" /></a></span>';
+                }else{
+                    echo '<span class="load"><a href="'.get_permalink().'"><img src="' . get_template_directory_uri() . '/img/loading.png" data-original="'.get_template_directory_uri().'/timthumb.php?src='.$strResult[1][0].'&w='.zm_get_option('img_w').'&h='.zm_get_option('img_h').'&a='.zm_get_option('crop_top').'&zc=1" alt="'.$post->post_title .'" /></a></span>';
+                }
+
+
+
 			} else { 
 				$random = mt_rand(1, 20);
 				echo '<span class="load"><a href="'.get_permalink().'"><img src="' . get_template_directory_uri() . '/img/loading.png" data-original="'.get_template_directory_uri().'/img/random/'. $random .'.jpg" alt="'.$post->post_title .'" /></a></span>';

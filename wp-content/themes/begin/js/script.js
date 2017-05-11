@@ -115,7 +115,7 @@ $(".user-box").mouseout(function() {
 });
 
 // 分享
-if(/iphone|ipod|ipad|ipad|mobile/i.test(navigator.userAgent.toLowerCase())){	
+if(/iphone|ipod|ipad|ipad|mobile/i.test(navigator.userAgent.toLowerCase())){
 	$('.share-sd').click(function() {
 		$('#share').animate({
 			opacity: 'toggle',
