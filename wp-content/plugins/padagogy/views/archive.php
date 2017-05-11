@@ -117,6 +117,8 @@ Template Name: Padagogy分类
         .file_size_wrap,.dl_count_wrap{
             width: 50%;
             float: left;
+            font-size: 12px;
+            text-align: center;
         }
 
       .tao-box  h2 {
@@ -201,19 +203,33 @@ Template Name: Padagogy分类
                                                 }
                                                 ?>
                                                 <span>网友评价：</span>
-                                                <select id="ratings-padagogy_<?php echo $post->ID ?>" data-vvv="<?php echo $ratings ?>" style="display: none;" name="rating" autocomplete="off">                             <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                </select>
-                                                <?php echo $app_score; ?>
+                                                <div class="br-wrapper br-theme-fontawesome-stars">
+                                                    <div class="br-widget br-readonly">
+                                                        <?php
+                                                            for ($i=0;$i<=5;$i++){
+                                                                if($i<=$ratings){
+                                                                    echo "<a href=\"#\" data-rating-value=\"1\" data-rating-text=\"$i\" class=\"br-selected br-current\"></a>";
+                                                                }else{
+                                                                    echo "<a href=\"#\" data-rating-value=\"2\" data-rating-text=\"$i\"></a>";
+                                                                }
+                                                            }
+                                                        ?>
+                                                    </div>
+                                                </div>
+
+<!--                                                <select id="ratings-padagogy_--><?php //echo $post->ID ?><!--" data-vvv="--><?php //echo $ratings ?><!--" style="display: none;" name="rating" autocomplete="off">                             <option value="1">1</option>-->
+<!--                                                    <option value="2">2</option>-->
+<!--                                                    <option value="3">3</option>-->
+<!--                                                    <option value="4">4</option>-->
+<!--                                                    <option value="5">5</option>-->
+<!--                                                </select>-->
+<!--                                                --><?php //echo $app_score; ?>
                                                 <script>
-                                                    $('#ratings-padagogy_<?php echo $post->ID ?>').barrating({
-                                                        theme: 'fontawesome-stars',
-                                                        readonly: true,
-                                                    }).barrating('set', Math.floor(<?php echo $ratings ?>));
-                                                </script>
+//<                                                    $('#ratings-padagogy_--><?php ////echo $post->ID ?>////').barrating({
+//                                                       theme: 'fontawesome-stars',
+//                                                       readonly: true,
+//                                                    }).barrating('set', Math.floor(<?php ////echo $ratings ?>////));
+                                             </script>
                                             </div>
                                             <div class="clear"></div>
                                         </div>
