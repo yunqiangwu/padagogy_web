@@ -239,7 +239,10 @@ Template Name: Padagogy分类
                             </article>
                         </div>
                     <?php endwhile; ?>
-                <?php } wp_reset_query(); ?>
+                <?php } else{
+                    require Padagogy::dir("views/template/content-none.php");
+                }
+                wp_reset_query(); ?>
         </main>
         <div class="clear"></div>
         <?php begin_pagenav(); ?>

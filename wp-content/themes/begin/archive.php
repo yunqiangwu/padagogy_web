@@ -14,7 +14,6 @@
 
 			<?php else : ?>
 				<?php get_template_part( 'template/content', 'none' ); ?>
-
 			<?php endif; ?>
 
 		</main><!-- .site-main -->

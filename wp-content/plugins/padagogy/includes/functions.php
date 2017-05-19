@@ -56,3 +56,14 @@ function padagogy_thumbnail_h() {
     }
 }
 
+
+function get_padagogy_search_form($isecho = true){
+    if($isecho){
+        require Padagogy::dir("views/searchform.php");
+        return;
+    }
+    ob_start();
+    require( Padagogy::dir("views/searchform.php") );
+    return ob_get_clean();
+}
+

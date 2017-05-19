@@ -52,7 +52,7 @@ CREATE DEFINER =`root`@`%` FUNCTION `url_decode`(original_text TEXT)
       END WHILE;
 
       SET encoded_text = MID(new_text, pointer, end_pointer - pointer);
-      SET result_text = CONVERT(UNHEX(REPLACE(encoded_text, "%", "")) USING utf8);
+      SET result_text = CONVERT(UNHEX(REPLACE(encoded_text , "%", "")) USING utf8);
       SET new_text = REPLACE(new_text, encoded_text, result_text);
       SET pointer = LOCATE("%", new_text, pointer + CHAR_LENGTH(result_text));
     END WHILE;

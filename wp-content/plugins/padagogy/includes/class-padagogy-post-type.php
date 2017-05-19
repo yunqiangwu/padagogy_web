@@ -17,7 +17,7 @@ class P_PadagogyPostType{
         register_post_type( 'padagogy', $this->post_type_options );
         register_taxonomy('app_classification','padagogy',$this->post_taxonomy_options);
         add_filter('template_include',function ($template) {
-            if( get_post_type() == 'padagogy'){
+            if( get_post_type() == 'padagogy' || get_queried_object()->taxonomy == 'app_classification' ||  get_queried_object()->post_type == 'padagogy'){
                 if(is_single()){
                     return PADAGOGY_FILE_PATH.'/views/single.php';
                 }
@@ -28,6 +28,17 @@ class P_PadagogyPostType{
 
            return $template;
         });
+
+
+        add_filter('comments_template',function ($template) {
+            if( get_post_type() == 'padagogy' || get_queried_object()->taxonomy == 'app_classification' ||  get_queried_object()->post_type == 'padagogy'){
+                    return PADAGOGY_FILE_PATH.'/views/comments.php';
+            }
+
+            return $template;
+        });
+
+
 
     }
 

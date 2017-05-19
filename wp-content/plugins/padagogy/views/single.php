@@ -180,6 +180,9 @@
                                     <div class="clear"></div>
                                 </div>
                             </div>
+
+
+
                             <div class="clear"></div>
 
                             <?php the_content(); ?>
@@ -207,9 +210,9 @@
                                 <?php if( function_exists( 'the_views' ) ) { the_views(true, '<li class="views"><i class="fa fa-eye"></i> ','</li>');  } ?>
                             </ul>
                             <ul id="fontsize">A+</ul>
-                            <div class="single-cat-tag">
-                                <div class="single-cat">分类：<?php echo get_the_term_list( $post->ID,  'taobao', '' ); ?></div>
-                            </div>
+<!--                            <div class="single-cat-tag">-->
+<!--                                <div class="single-cat">分类：--><?php //echo get_the_term_list( $post->ID,  'taobao', '' ); ?><!--</div>-->
+<!--                            </div>-->
                         </footer><!-- .entry-footer -->
 
                         <div class="clear"></div>
@@ -217,21 +220,21 @@
 
                 </article><!-- #post -->
 
-                <?php if (zm_get_option('copyright')) { ?>
-                    <?php get_template_part( 'inc/copyright' ); ?>
-                <?php } ?>
+<!--                --><?php //if (zm_get_option('copyright')) { ?>
+<!--                    --><?php //get_template_part( 'inc/copyright' ); ?>
+<!--                --><?php //} ?>
 
-                <?php if (zm_get_option('related_img')) { ?>
-                    <?php include( 'template/single-padagogy.php' ); ?>
-                <?php } ?>
+<!--                --><?php //if (zm_get_option('related_img')) { ?>
+<!--                    --><?php //include( 'template/single-padagogy.php' ); ?>
+<!--                --><?php //} ?>
 
 <!--                --><?php //get_template_part('ad/ads', 'comments'); ?>
 
                 <nav class="nav-single wow fadeInUp" data-wow-delay="0.3s">
-                    <?php
-                    if (get_previous_post()) { previous_post_link( '%link','<span class="meta-nav"><span class="post-nav"><i class="fa fa-angle-left"></i> ' . sprintf(__( '上一篇', 'begin' )) . '</span><br/>%title</span>' ); } else { echo "<span class='meta-nav'><span class='post-nav'>" . sprintf(__( '没有了', 'begin' )) . "<br/></span>" . sprintf(__( '已是最后文章', 'begin' )) . "</span>"; }
-                    if (get_next_post()) { next_post_link( '%link', '<span class="meta-nav"><span class="post-nav">' . sprintf(__( '下一篇', 'begin' )) . ' <i class="fa fa-angle-right"></i></span><br/>%title</span>' ); } else { echo "<span class='meta-nav'><span class='post-nav'>" . sprintf(__( '没有了', 'begin' )) . "<br/></span>" . sprintf(__( '已是最新文章', 'begin' )) . "</span>"; }
-                    ?>
+<!--                    --><?php
+//                    if (get_previous_post()) { previous_post_link( '%link','<span class="meta-nav"><span class="post-nav"><i class="fa fa-angle-left"></i> ' . sprintf(__( '上一篇', 'begin' )) . '</span><br/>%title</span>' ); } else { echo "<span class='meta-nav'><span class='post-nav'>" . sprintf(__( '没有了', 'begin' )) . "<br/></span>" . sprintf(__( '已是最后文章', 'begin' )) . "</span>"; }
+//                    if (get_next_post()) { next_post_link( '%link', '<span class="meta-nav"><span class="post-nav">' . sprintf(__( '下一篇', 'begin' )) . ' <i class="fa fa-angle-right"></i></span><br/>%title</span>' ); } else { echo "<span class='meta-nav'><span class='post-nav'>" . sprintf(__( '没有了', 'begin' )) . "<br/></span>" . sprintf(__( '已是最新文章', 'begin' )) . "</span>"; }
+//                    ?>
                     <div class="clear"></div>
                 </nav>
 
