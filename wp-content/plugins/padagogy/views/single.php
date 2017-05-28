@@ -1,3 +1,11 @@
+<?php wp_enqueue_style( 'padagogy', padagogy()->url(  'css/single.css'), array(), VERSION );
+wp_enqueue_script( 'padagogy', padagogy()->url(  'js/single.js'), array('jquery','padagogy_util','jquery_qrcode'), VERSION );
+wp_enqueue_script( 'padagogy_util', padagogy()->url(  'js/util.js'), array('jquery'), VERSION );
+wp_enqueue_script( 'jquery_qrcode', padagogy()->url(  'lib/jquery-qrcode/dist/jquery-qrcode.js'), array('jquery'), VERSION );
+
+//IsPC
+?>
+
 <?php get_header(); ?>
 
     <style type="text/css">
@@ -176,6 +184,9 @@
                                         <?php echo $app_score; ?>
 
                                     </div>
+
+                                    <button  class="btn app-download-btn" data-dl-rul="http://app.qq.com/#id=search&key=<?php echo the_title(); ?>">立即下载<div data-dl-rul=" <?php echo get_post_meta($post->ID, 'dl_url', true); ?>" class="dl_qrcode"></div></button>
+
 
                                     <div class="clear"></div>
                                 </div>

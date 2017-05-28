@@ -10,7 +10,7 @@ License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Padagogy website
+Padagogy website plugin
 
 == Installation ==
 
@@ -31,6 +31,6 @@ Padagogy website
 * First release
 
 == Upgrade Notice ==
-
+abc
 = 0.0.0 =
 First Release

@@ -1,8 +1,11 @@
 <?php
-// P_Plugin_Class
 
+/**
+ * Class P_PadagogyPostType 实现Padagogy文章的注册和编辑
+ */
 class P_PadagogyPostType{
 
+    // 在控制台中视图上显示的文案 ,如按钮的文章, 提示内容等
     var $labels;
     var $permissions;
     var $post_type_options;
@@ -13,6 +16,7 @@ class P_PadagogyPostType{
 		$this->PadagogyPostType();
 	}
 
+	// 注册函数,调用此函数完成注册
 	function register(){
         register_post_type( 'padagogy', $this->post_type_options );
         register_taxonomy('app_classification','padagogy',$this->post_taxonomy_options);
@@ -25,34 +29,25 @@ class P_PadagogyPostType{
                     return PADAGOGY_FILE_PATH.'/views/archive.php';
                 }
             }
-
            return $template;
         });
-
-
         add_filter('comments_template',function ($template) {
             if( get_post_type() == 'padagogy' || get_queried_object()->taxonomy == 'app_classification' ||  get_queried_object()->post_type == 'padagogy'){
                     return PADAGOGY_FILE_PATH.'/views/comments.php';
             }
-
             return $template;
         });
-
-
 
     }
 
     function set_permissions(){
-
     }
 	
 	function PadagogyPostType() {
-
-
         $this->labels = array(
             'name' => 'Padagogy APP',
             'singular_name' => 'APP',
-            'name_admin_bar'     => '商品',
+            'name_admin_bar'     => '应用',
             'all_items'          =>  'Padagogy管理' ,
             'menu_name' => 'Padagogy',
             'add_new' => '添加应用',
@@ -115,17 +110,9 @@ class P_PadagogyPostType{
             'show_admin_column' => true
         );
 
-
-        //Register the post type
+        // 将注册函数添加到系统的初始化事件中去,即在系统完成初始化的过程中完整 对象的注册
         add_action('init', array($this,'register') );
-        //Set permissions
         add_action('init', array($this,'set_permissions') );
-
-        //Make Table of Contents on by default for Wiki post type
-//        add_action('publish_wiki',array($this->PadagogyPostType,'set_toc'), 12);
-        //Make Table of Contents on by default for pages marked as Wikis
-//        add_action('publish_page',array($this->PadagogyPostType,'set_toc'));
-
 	}
 
 }

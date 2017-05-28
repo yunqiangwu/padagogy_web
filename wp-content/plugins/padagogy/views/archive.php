@@ -76,8 +76,18 @@ Template Name: Padagogy分类
             color: #ffbe00 !important;
         }
         .br-wrapper{
-            transform: scale(1.5);
+            /*transform: scale(1.5);*/
             margin: 10px 20px;
+        }
+        .tao-box  h2{
+            white-space:nowrap;
+        }
+        .tao-img {
+            width: auto;
+            height: 0;
+            padding-bottom: 100%;
+            overflow: hidden;
+            transition-duration: .3s;
         }
 
     </style>
@@ -104,8 +114,6 @@ Template Name: Padagogy分类
                     p_query();
                 },1000);
             });
-
-
         });
 
     </script>

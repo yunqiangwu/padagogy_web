@@ -59,7 +59,21 @@ if ( post_password_required() ) {
 						</script>
 					</div>
 					<?php endif; ?>
-
+                    <div>评分: <script>
+                            $(function() {
+                                $('#ratings').barrating({
+                                    theme: 'fontawesome-stars',
+                                }).barrating('set', Math.floor(<?php echo $ratings ?>));
+                            });
+                        </script>
+                        <select id="ratings"  name="rating" autocomplete="off">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
 			        <p class="emoji-box"><?php get_template_part( 'inc/smiley' ); ?></p>
 					<p class="comment-form-comment"><textarea id="comment" name="comment" rows="4" tabindex="1"></textarea></p>
 
@@ -136,7 +150,8 @@ if ( post_password_required() ) {
 		</h2>
 
 		<ol class="comment-list">
-			<?php wp_list_comments( 'type=comment&callback=mytheme_comment' ); ?>
+
+			<?php  wp_list_comments( 'type=comment&callback=mypadagogytheme_comment' ); ?>
 			<?php if($numPingBacks>0) { ?>
 				<div id="trackbacks">
 					<h2 class="backs"><?php _e( '来自外部的引用：', 'begin' ); ?><?php echo ' '.$numPingBacks.'';?></h2>

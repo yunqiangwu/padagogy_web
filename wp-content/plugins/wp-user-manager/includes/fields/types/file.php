@@ -104,9 +104,13 @@ class WPUM_Field_Type_File extends WPUM_Field_Type {
 
 					$output .= '<span class="wpum-uploaded-file-preview"><img src="' . esc_url( $file['url'] ) . '" /></span>';
 
+				elseif( 3 !== strlen( $extension ) || in_array( $extension, array( 'pdf' ) ) ) :
+
+					$output .= '<span class="wpum-uploaded-file-preview"><a href="' . esc_url( $file['url'] ) . '">'. esc_html( basename( $file['url'] ) ) .'</a></span>';
+
 				else :
 
-					$output .= '	<span class="wpum-uploaded-file-name"><code>' . esc_html( basename( $file['url'] ) ) . '</code></span>';
+					$output .= '<span class="wpum-uploaded-file-name"><code>' . esc_html( basename( $file['url'] ) ) . '</code></span>';
 
 				endif;
 
@@ -120,6 +124,10 @@ class WPUM_Field_Type_File extends WPUM_Field_Type {
 			if ( 3 !== strlen( $extension ) || in_array( $extension, array( 'jpg', 'gif', 'png', 'jpeg', 'jpe' ) ) ) :
 
 				$output .= '<span class="wpum-uploaded-file-preview"><img src="' . esc_url( $files['url'] ) . '" /></span>';
+
+			elseif( 3 !== strlen( $extension ) || in_array( $extension, array( 'pdf' ) ) ) :
+
+				$output .= '<span class="wpum-uploaded-file-preview"><a href="' . esc_url( $files['url'] ) . '" download>'. esc_html( basename( $files['url'] ) ) .'</a></span>';
 
 			else :
 

@@ -9,46 +9,80 @@ class P_PadagogyWidget extends WP_Widget {
             'description' => __( 'Padagogy分类' ),
             'customize_selective_refresh' => true,
         );
+        register_nav_menus(
+            array('padagogy-index-menu' => 'Padagogy首页分类推荐菜单')
+        );
         parent::__construct('padagogy', 'Padagogy分类', $widget_ops);
     }
 
     function widget($args, $instance) {
-        extract($args, EXTR_SKIP);
-        $title = apply_filters( 'widget_title', $instance['title'] );
-        echo $before_widget;
-        if ( ! empty( $title ) )
-            echo $before_title . $title . $after_title;
-        $number = strip_tags($instance['number']) ? absint( $instance['number'] ) : 4;
         ?>
 
-        <div class="picture">
-            <?php
-            $args = array(
-                'post_type' => 'padagogy',
-                'showposts' => $number,
-//                'tax_query' => array(
-//                    array(
-//                        'taxonomy' => 'videos',
-//                        'terms' => $instance['cat']
-//                    ),
-//                )
-            );
-            ?>
-            <?php $my_query = new WP_Query($args); while ($my_query->have_posts()) : $my_query->the_post(); ?>
-                <span class="img-box">
-                    <span class="img-x1">
-                        <span class="insets">
-                            <?php if (zm_get_option('lazy_s')) { img_thumbnail_h(); } else { img_thumbnail(); } ?>
-                        </span>
-                    </span>
-	            </span>
-            <?php endwhile;?>
-            <?php wp_reset_query(); ?>
-            <span class="clear"></span>
-        </div>
+        <style>
+            .padagogy-index-menu{
 
+            }
+            .padagogy-index-menu>.menu-item{
+                width: 300px!important;
+                height:300px;
+                background: red;
+                margin: 10px;
+            }
+
+
+        </style>
         <?php
-        echo $after_widget;
+        wp_nav_menu( array(
+            'theme_location'	=> 'padagogy-index-menu',
+            'menu_class'		=> 'padagogy-index-menu',
+//                'before'          => '#before#',//显示在导航a标签之前
+//                'after'           => '#after#',//显示在导航a标签之后
+//                'link_before'     => '<span data-sulg="%2$s">',//显示在导航链接名之后
+//                'link_after'      => '</span>',//显示在导航链接名之前
+            'fallback_cb'		=> function () {
+                echo '<ul class="padagogy-menu"><li><a href="'.home_url().'/wp-admin/nav-menus.php">设置菜单</a></li></ul>';
+            }
+        ) );
+
+
+//        extract($args, EXTR_SKIP);
+//        $title = apply_filters( 'widget_title', $instance['title'] );
+//        echo $before_widget;
+//        if ( ! empty( $title ) )
+//            echo $before_title . $title . $after_title;
+//        $number = strip_tags($instance['number']) ? absint( $instance['number'] ) : 4;
+//        ?>
+<!---->
+<!---->
+<!---->
+<!--        <div class="picture">-->
+<!--            --><?php
+//            $args = array(
+//                'post_type' => 'padagogy',
+//                'showposts' => $number,
+////                'tax_query' => array(
+////                    array(
+////                        'taxonomy' => 'videos',
+////                        'terms' => $instance['cat']
+////                    ),
+////                )
+//            );
+//            ?>
+<!--            --><?php //$my_query = new WP_Query($args); while ($my_query->have_posts()) : $my_query->the_post(); ?>
+<!--                <span class="img-box">-->
+<!--                    <span class="img-x1">-->
+<!--                        <span class="insets">-->
+<!--                            --><?php //if (zm_get_option('lazy_s')) { img_thumbnail_h(); } else { img_thumbnail(); } ?>
+<!--                        </span>-->
+<!--                    </span>-->
+<!--	            </span>-->
+<!--            --><?php //endwhile;?>
+<!--            --><?php //wp_reset_query(); ?>
+<!--            <span class="clear"></span>-->
+<!--        </div>-->
+<!---->
+<!--        --><?php
+//        echo $after_widget;
     }
     function update( $new_instance, $old_instance ) {
         if (!isset($new_instance['submit'])) {
