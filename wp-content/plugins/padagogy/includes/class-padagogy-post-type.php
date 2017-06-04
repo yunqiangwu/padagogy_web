@@ -3,6 +3,9 @@
 /**
  * Class P_PadagogyPostType 实现Padagogy文章的注册和编辑
  */
+
+require_once 'AppMsgService.php';
+
 class P_PadagogyPostType{
 
     // 在控制台中视图上显示的文案 ,如按钮的文章, 提示内容等
@@ -11,9 +14,14 @@ class P_PadagogyPostType{
     var $post_type_options;
     var $post_taxonomy_options;
     var $taxonomy_labels;
+    private $appMsgService = null;
+
 
 	function __construct() {
+
 		$this->PadagogyPostType();
+//        exit($this->appMsgService->getAppMsgListByName());
+
 	}
 
 	// 注册函数,调用此函数完成注册
@@ -44,6 +52,9 @@ class P_PadagogyPostType{
     }
 	
 	function PadagogyPostType() {
+
+        $this->appMsgService = AppMsgService::get_instance();
+
         $this->labels = array(
             'name' => 'Padagogy APP',
             'singular_name' => 'APP',
