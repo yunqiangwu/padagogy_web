@@ -23,11 +23,12 @@ class P_PadagogyWidget extends WP_Widget {
 
             }
             .padagogy-index-menu>.menu-item{
-                width: 300px!important;
-                height:300px;
                 background: red;
                 margin: 10px;
+                z-index: 1000;
             }
+
+
 
 
         </style>

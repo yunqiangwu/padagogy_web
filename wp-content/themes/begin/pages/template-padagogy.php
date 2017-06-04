@@ -5,18 +5,20 @@ Template Name: Padagogy
 ?>
 <?php get_header(); ?>
 
+    <!-- 主页工具 -->
+    <div id="cms-widget-one" class="wow fadeInUp" data-wow-delay="0.5s">
+        <?php if ( ! dynamic_sidebar( 'cms-index' ) ) : ?>
+            <aside class="add-widgets">
+                <a href="<?php echo admin_url(); ?>widgets.php" target="_blank">为“主页工具”添加小工具</a>
+            </aside>
+        <?php endif; ?>
+        <div class="clear"></div>
+    </div>
     <div id="primary" class="content-area">
+
         <main id="main" class="site-main" role="main">
 
-            <!-- 主页工具 -->
-            <div id="cms-widget-one" class="wow fadeInUp" data-wow-delay="0.5s">
-                <?php if ( ! dynamic_sidebar( 'cms-index' ) ) : ?>
-                    <aside class="add-widgets">
-                        <a href="<?php echo admin_url(); ?>widgets.php" target="_blank">为“主页工具”添加小工具</a>
-                    </aside>
-                <?php endif; ?>
-                <div class="clear"></div>
-            </div>
+
             <!-- 最新文章 -->
             <?php if (zm_get_option('news')) { ?>
                 <?php
@@ -39,7 +41,7 @@ Template Name: Padagogy
         </main><!-- .site-main -->
     </div><!-- .content-area -->
     <!-- 侧边小工具 -->
-<?php get_sidebar('cms'); ?>
+<?php //get_sidebar('cms'); ?>
 
     <!-- 底部分类 -->
 <?php if (zm_get_option('cat_big')) { ?>
