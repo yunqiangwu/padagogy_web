@@ -219,6 +219,8 @@ final class Padagogy {
 	 */
 	public function plugin_classes() {
 		$this->PadagogyPostType = new P_PadagogyPostType( );
+
+
         add_action( 'widgets_init', create_function( '', 'register_widget( "P_PadagogyWidget" );' ) );
 
 
