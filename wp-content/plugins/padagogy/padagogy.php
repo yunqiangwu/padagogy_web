@@ -44,6 +44,9 @@
  * @since  0.0.0
  * @param  string $class_name Name of the class being requested.
  */
+
+require 'vendor/autoload.php';
+
 function padagogy_autoload_classes( $class_name ) {
 
 	// If our class doesn't have our prefix, don't load it.
@@ -135,12 +138,9 @@ final class Padagogy {
 	 * @since  0.0.0
 	 */
 	protected function __construct() {
-
-
 		$this->basename = plugin_basename( __FILE__ );
 		$this->url      = plugin_dir_url( __FILE__ );
 		$this->path     = plugin_dir_path( __FILE__ );
-
 
         define('PADAGOGY_FILE_PATH', dirname(__FILE__));
         define('PADAGOGY_DIR_NAME', basename(PADAGOGY_FILE_PATH));
@@ -158,7 +158,6 @@ final class Padagogy {
             }
             return $atts;
         },10,3);
-
 
         add_filter('wp_nav_menu_objects',function ($menu_items, $args){
             if($args->theme_location=='padagogy-menu') {

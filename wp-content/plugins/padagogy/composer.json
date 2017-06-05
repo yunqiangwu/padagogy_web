@@ -1,0 +1,14 @@
+{
+    "name": "wayne/padagogy",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.2",
+        "fabpot/goutte": "^3.2"
+    },
+    "authors": [
+        {
+            "name": "13485",
+            "email": "yunqiang.wu@hand-china.com"
+        }
+    ]
+}
