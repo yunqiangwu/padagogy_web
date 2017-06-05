@@ -37,6 +37,9 @@ Template Name: Padagogy
                 ?>
             <?php } ?>
 
+            <?php
+            if ( function_exists( 'tag_groups_cloud' ) ) echo tag_groups_cloud( array( 'amount' => 10 ) );
+            ?>
 
         </main><!-- .site-main -->
     </div><!-- .content-area -->

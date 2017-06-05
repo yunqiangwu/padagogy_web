@@ -1,0 +1,18 @@
+
+.tag-groups-up {
+position:absolute;
+width:30px;
+height:27px;
+background-attachment:fixed;
+top:0px;
+background: url(../images/up-down.png) no-repeat top left;}
+
+.tag-groups-down {
+position:absolute;
+width:30px;
+height:27px;
+background-attachment:fixed;
+top:-15px;
+background: url(../images/up-down.png) no-repeat top left;}
+
+
