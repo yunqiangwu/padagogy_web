@@ -1241,7 +1241,7 @@ a, button, input {
 	left: -10px;
 	padding-top: 10px;
 	display: none;
-	z-index: 10;
+	z-index: 101;
 }
 
 .user-info-min {
