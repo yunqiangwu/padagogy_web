@@ -14,7 +14,7 @@ class P_PadagogyPostType{
     var $post_type_options;
     var $post_taxonomy_options;
     var $taxonomy_labels;
-    private $appMsgService = null;
+
 
 
 	function __construct() {
@@ -53,7 +53,7 @@ class P_PadagogyPostType{
 	
 	function PadagogyPostType() {
 
-        $this->appMsgService = AppMsgService::get_instance();
+
 
         $this->labels = array(
             'name' => 'Padagogy APP',

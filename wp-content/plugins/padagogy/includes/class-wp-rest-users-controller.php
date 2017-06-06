@@ -4,12 +4,18 @@
  * Access users
  */
 
+require_once 'AppMsgService.php';
+
 class P_PadagogyAppController extends WP_REST_Controller {
 
-	public function __construct() {
-		$this->namespace = 'wp/v2';
-		$this->rest_base = 'users';
+    protected $namespace;
+    protected $rest_base;
+    private $appMsgService = null;
 
+	public function __construct() {
+		$this->namespace = 'api/padagogy';
+		$this->rest_base = 'app';
+        $this->appMsgService = AppMsgService::get_instance();
 		$this->meta = new WP_REST_User_Meta_Fields();
 	}
 
