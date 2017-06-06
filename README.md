@@ -16,33 +16,15 @@
 
 
 
-## 目录结构介绍 ##
+## 重点目录结构介绍 ##
 
-	|-- build                            // webpack配置文件
-	|-- config                           // 项目打包路径
-	|-- src                              // 源码目录
-	|   |-- components                   // 组件
-	|       |-- common                   // 公共组件
-	|           |-- Header.vue           // 公共头部
-	|           |-- Home.vue           	 // 公共路由入口
-	|           |-- Sidebar.vue          // 公共左边栏
-	|		|-- page                   	 // 主要路由页面
-	|           |-- BaseCharts.vue       // 基础图表
-	|           |-- BaseForm.vue         // 基础表单
-	|           |-- BaseTable.vue        // 基础表格
-	|           |-- Login.vue          	 // 登录
-	|           |-- Markdown.vue         // markdown组件
-	|           |-- MixCharts.vue        // 混合图表
-	|           |-- Readme.vue           // 自述组件
-	|           |-- Upload.vue           // 图片上传
-	|           |-- VueEditor.vue        // 富文本编辑器
-	|           |-- VueTable.vue         // vue表格组件
-	|   |-- App.vue                      // 页面入口文件
-	|   |-- main.js                      // 程序入口文件，加载各种公共组件
-	|-- .babelrc                         // ES6语法编译配置
-	|-- .editorconfig                    // 代码编写规格
+	|-- screenshots                      // 项目截图目录
+	|-- wp-content                       // wordpress 用户扩展目录
+	|   |-- plugins                      // 插件目录
+	|       |-- padagogy                 // Padagogy 插件目录
+	|-- wp-config.php                    // 项目配置 数据库配置
 	|-- .gitignore                       // 忽略的文件
-	|-- index.html                       // 入口html文件
+	|-- index.php                        // 入口php文件
 	|-- package.json                     // 项目及工具的依赖配置文件
 	|-- README.md                        // 说明
 
@@ -68,10 +50,22 @@
 基于wordpress后台菜单管理开发。访问地址：[Wordpress后台](http://padagogy.cn/wp-admin/nav-menus.php?action=edit&menu=20)
 
 ## 项目截图 ##
-### 默认皮肤 ###
+### 网站首页 ###
 
-![Image text](https://github.com/lin-xin/manage-system/raw/master/screenshots/wms1.png)
+![Image text](https://github.com/yunqiangwu/padagogy_web/raw/master/screenshots/index.png)
 
-### 浅绿色皮肤 ###
+### APP筛选列表 ###
 
-![Image text](https://github.com/lin-xin/manage-system/raw/master/screenshots/wms2.png)
+![Image text](https://github.com/yunqiangwu/padagogy_web/raw/master/screenshots/padagogylist.png)
+
+### Padagogy管理 ###
+
+![Image text](https://github.com/yunqiangwu/padagogy_web/raw/master/screenshots/appmgr.png)
+
+### 多重筛选菜单编辑  ###
+
+![Image text](https://github.com/yunqiangwu/padagogy_web/raw/master/screenshots/menumgr.png)
+
+### APP展示页面 ###
+
+![Image text](https://github.com/yunqiangwu/padagogy_web/raw/master/screenshots/app.png)
