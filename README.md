@@ -1,21 +1,19 @@
 # Padagogy 中文站 #
 基于 wordpress 的移动App分类网站。[线上地址](http://padagogy.cn/)
-
 ## 前言 ##
-之前在公司用了Vue + Element组件库做了个后台管理系统，基本很多组件可以直接引用组件库的，但是也有一些需求无法满足。像图片裁剪上传、富文本编辑器、图表等这些在后台管理系统中很常见的功能，就需要引用其他的组件才能完成。从寻找组件，到使用组件的过程中，遇到了很多问题，也积累了宝贵的经验。所以我就把开发这个后台管理系统的经验，总结成这个后台管理系统解决方案。
+随着移动互联网技术的的蓬勃发展，以及手媒体的时代到来，人们更习惯于在手机或平板上使用APP来进行学习与交流，市场上的教育类APP成千上万，但大多数应用商店对于教育类APP缺乏专业性的细致分类，用户想要找到合适的APP无疑于大海捞针。教师使用APP应用于移动学习教学的经验和案例也没有得到充分的分享。
 
-该方案作为一套多功能的后台框架模板，适用于绝大部分的后台管理系统（Web Management System）开发。基于vue.js,使用vue-cli脚手架快速生成项目目录，引用Element UI组件库，方便开发快速简洁好看的组件。分离颜色样式，支持手动切换主题色，而且很方便使用自定义主题色。
+笔者设计并开发一款基于WordPress的Padagogy网站,Padagogy Wheel是澳大利亚学习设计师Alan基于 布鲁姆教育目标分类学提出的电子书包教学法模型，有助于教师设计电子书包环境下的参与式学习，网站的主要作用是分享App使用相关教学案例以及根据Padagogy模型将App分类，使得App的功能在移动学习的领域得到充分的挖掘和利用,本文将介绍该网站从设计到开发的具体流程.
+
 
 ## 功能 ##
-- [x] Element UI
-- [x] 登录/注销
-- [x] 表格
-- [x] 表单
-- [x] 图表 :bar_chart:
-- [x] 富文本编辑器
-- [x] markdown编辑器
-- [x] 图片拖拽/裁剪上传
-- [x] 支持切换主题色 :sparkles:
+- [x] 基于Wordpress网站开发，网站具有CMS系统的基本功能，可以编辑，管理，发布新闻，文章等
+- [x] 系统能够提供用邮箱注册用户账号，登录功能
+- [x] Padagogy的App信息以Wiki的形式存在于系统之中，每条App信息至少要关联对应的官网链接，和下载地址，每条信息可以关联对应的教学案例或相关的文章
+- [x] 所有用户默认具有wiki的编辑，添加,发布,权限，每个用户都可以添加App信息，在发布时，确定wiki的分类信息标签，发布之前的App信息教学案例和相关的应用经验
+- [x] 未注册用户能够浏览网站文章，能够根据Padagogy的分类标签，筛选/检索App信息
+
+
 
 
 ## 目录结构介绍 ##
@@ -49,205 +47,24 @@
 	|-- README.md                        // 说明
 
 
-## 安装步骤 ##
+## 安装启动步骤 ##
 
-	git clone https://github.com/lin-xin/manage-system.git		// 把模板下载到本地
-	cd manage-system											// 进入模板目录
-	npm install													// 安装项目依赖，等待安装完成之后
+	git clone git@github.com:yunqiangwu/padagogy_web.git	// 把源码下载到本地
+	cd padagogy_web											// 进入项目目录
+	start http://padagogy.cn/								// 运行线上项目
 
-## 本地开发 ##
+## 使用说明与演示 ##
 
-	// 开启服务器，浏览器访问 http://localhost:8080
-	npm run dev
+### 登录网站后台 ###
+访问Wordpress后台。访问地址：[Wordpress后台管理](http://padagogy.cn/wp-admin/)
+用户名：wuyun
+密码：wu950429
 
-## 构建生产 ##
+### 添加App ###
+访问Padagogy管理界面后台。访问地址：[管理Padagogy](http://padagogy.cn/wp-admin/edit.php?post_type=padagogy)
 
-	// 执行构建命令，生成的dist文件夹放在服务器下即可访问
-	npm run build
-
-## 组件使用说明与演示 ##
-
-### element-ui ###
-一套基于vue.js2.0的桌面组件库。访问地址：[element](http://element.eleme.io/#/zh-CN/component/layout)
-
-### vue-datasource ###
-一个用于动态创建表格的vue.js服务端组件。访问地址：[vue-datasource](https://github.com/coderdiaz/vue-datasource)
-
-```JavaScript
-<template>
-	<div>
-		<datasource language="en" :table-data="information.data"
-	        :columns="columns"
-	        :pagination="information.pagination"
-	        :actions="actions"
-	        v-on:change="changePage"
-	        v-on:searching="onSearch"></datasource>
-	</div>
-</template>
-
-<script>
-	import Datasource from 'vue-datasource';					// 导入quillEditor组件
-    export default {
-        data: function(){
-            return {
-                information: {
-	                pagination: {...},						// 页码配置
-	                data: [...]
-	            },
-	            columns: [...],								// 列名配置
-	            actions: [...]								// 功能配置
-            }
-        },
-        components: {
-            Datasource										// 声明组件Datasource
-        },
-	    methods: {
-	        changePage(values) {...},
-	        onSearch(searchQuery) {...}
-	    }
-	}
-</script>
-```
-
-
-### Vue-Quill-Editor ###
-基于Quill、适用于Vue2的富文本编辑器。访问地址：[vue-quill-editor](https://github.com/surmon-china/vue-quill-editor)
-
-```JavaScript
-<template>
-	<div>
-		<quill-editor ref="myTextEditor" v-model="content" :config="editorOption"></quill-editor>
-	</div>
-</template>
-
-<script>
-	import { quillEditor } from 'vue-quill-editor';			// 导入quillEditor组件
-    export default {
-        data: function(){
-            return {
-                content: '',								// 编辑器的内容
-                editorOption: {								// 编辑器的配置
-                    // something config
-                }
-            }
-        },
-        components: {
-            quillEditor										// 声明组件quillEditor
-        }
-	}
-</script>
-```
-
-### Vue-SimpleMDE ###
-Vue.js的Markdown Editor组件。访问地址：[Vue-SimpleMDE](https://github.com/F-loat/vue-simplemde)
-
-```JavaScript
-<template>
-    <div>
-        <markdown-editor v-model="content" :configs="configs" ref="markdownEditor"></markdown-editor>
-    </div>
-</template>
-
-<script>
-    import { markdownEditor } from 'vue-simplemde';			// 导入markdownEditor组件
-    export default {
-        data: function(){
-            return {
-                content:'',									// markdown编辑器内容
-                configs: {									// markdown编辑器配置参数
-                    status: false,							// 禁用底部状态栏
-                    initialValue: 'Hello BBK',				// 设置初始值
-                    renderingConfig: {
-                        codeSyntaxHighlighting: true,		// 开启代码高亮
-                        highlightingTheme: 'atom-one-light' // 自定义代码高亮主题
-                    }
-                }
-            }
-        },
-        components: {
-            markdownEditor									// 声明组件markdownEditor
-        }
-    }
-</script>
-```
-
-### Vue-Core-Image-Upload ###
-一款轻量级的vue上传插件，支持裁剪。访问地址：[Vue-Core-Image-Upload](https://github.com/Vanthink-UED/vue-core-image-upload)
-
-```JavaScript
-
-<template>
-    <div>
-		<img :src="src">									// 用于显示上传的图片
-        <vue-core-image-upload :class="['pure-button','pure-button-primary','js-btn-crop']"
-           :crop="true"										// 是否裁剪
-           text="上传图片"
-           url=""											// 上传路径
-           extensions="png,gif,jpeg,jpg"					// 限制文件类型
-           @:imageuploaded="imageuploaded">					// 监听图片上传完成事件
-		</vue-core-image-upload>
-    </div>
-</template>
-
-<script>
-    import VueCoreImageUpload  from 'vue-core-image-upload';	// 导入VueCoreImageUpload组件
-    export default {
-        data: function(){
-            return {
-                src:'../img/1.jpg'							// 默认显示图片地址
-            }
-        },
-        components: {
-            VueCoreImageUpload								// 声明组件VueCoreImageUpload
-        },
-        methods:{
-            imageuploaded(res) {							// 定义上传完成执行的方法
-                console.log(res)
-            }
-        }
-    }
-</script>
-
-```
-
-### vue-echarts-v3 ###
-基于vue2和eCharts.js3的图表组件。访问地址：[vue-echarts-v3](https://github.com/xlsdg/vue-echarts-v3)
-
-```JavaScript
-<template>
-    <div>
-        <IEcharts :option="bar"></IEcharts>
-    </div>
-</template>
-	
-<script>
-    import IEcharts from 'vue-echarts-v3';					// 导入IEcharts组件
-    export default {
-        data: function(){
-            return {
-                bar: {
-			        title: {
-			          text: '柱状图'							// 图标标题文本
-			        },
-			        tooltip: {},	
-			        xAxis: {								// 横坐标
-			          data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
-			        },
-			        yAxis: {},								// 纵坐标
-			        series: [{
-			          name: '销量',
-			          type: 'bar',							// 图标类型
-			          data: [5, 20, 36, 10, 10, 20]
-			        }]
-			   	}
-            }
-        },
-        components: {
-            IEcharts								// 声明组件VueCoreImageUpload
-        }
-    }
-</script>
-```
+### 编辑多重筛选菜单 ###
+基于wordpress后台菜单管理开发。访问地址：[Wordpress后台](http://padagogy.cn/wp-admin/nav-menus.php?action=edit&menu=20)
 
 ## 其他注意事项 ##
 ### 一、如果我不想用到上面的某些组件呢，那我怎么在模板中删除掉不影响到其他功能呢？ ###
